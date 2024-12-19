@@ -38,6 +38,23 @@ public class ProductoTest {
         boolean resultado =producto.comprar(5);
         assertTrue(resultado);
         
+    }
+
+
+    @Test
+    public void testCalcularPrecioCompra() {
+
+        Producto producto = new Producto("gominola",20, 2.5f);
+        producto.calcularPrecioCompra(20);
+        int cantidadComprar = 4;
+        float precioTotal = producto.calcularPrecioCompra(cantidadComprar);
+        float precioEsperado= 2.5f * cantidadComprar;
+        assertEquals(precioEsperado, precioTotal, 001);
+        
+
+
+
+        
     } 
 
 
