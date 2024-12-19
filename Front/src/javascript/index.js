@@ -1,9 +1,11 @@
-$.get ('http://localhost:1234/api/productos');
+  $(function() {
+      $.get ('http://localhost:1234/api/productos');
 
 
-$('#borrar').on('click', function() {
+    $('#borrar').on('click', function() {
 
-    alert("Borrado")
-})
+        alert("Borrado")
+    });
 
-alert('hola')
+    alert('hola');
+});
