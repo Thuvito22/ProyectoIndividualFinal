@@ -44,12 +44,11 @@ public class ProductoTest {
     @Test
     public void testCalcularPrecioCompra() {
 
-        Producto producto = new Producto("gominola",20, 2.5f);
-        producto.calcularPrecioCompra(20);
-        int cantidadComprar = 4;
-        float precioTotal = producto.calcularPrecioCompra(cantidadComprar);
-        float precioEsperado= 2.5f * cantidadComprar;
-        assertEquals(precioEsperado, precioTotal, 001);
+        Producto producto = new Producto("gominola",20,2.5f);
+        float precioTotal = producto.calcularPrecioCompra(18);
+  
+     
+        assertEquals(45.0, precioTotal, 001);
         
 
 

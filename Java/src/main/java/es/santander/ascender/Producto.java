@@ -3,7 +3,8 @@ package es.santander.ascender;
 public class Producto {
 
     private int cantidad;
-
+    private float precio;
+    private String nombre;
     public Producto() {
 
     }
@@ -18,13 +19,9 @@ public class Producto {
         this.cantidad = cantidad;
     }
 
-    private float precio;
-
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-
-    private String nombre;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
