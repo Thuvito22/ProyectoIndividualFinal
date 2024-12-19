@@ -1,6 +1,10 @@
 package es.santander.ascender;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import javax.swing.plaf.TreeUI;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,8 +21,25 @@ public class ProductoTest {
 
     }
 
-    @Test
-    void testGetCantidad() {
 
+    @Test
+    public void testComprarFalso() {
+        Producto producto = new Producto();
+        
+        boolean resultado =producto.comprar(10);
+        assertFalse(resultado);
+        
     }
+
+    @Test
+    public void testComprar() {
+        Producto producto = new Producto();
+        producto.anadirCantidad(10);
+        boolean resultado =producto.comprar(5);
+        assertTrue(resultado);
+        
+    } 
+
+
+
 }

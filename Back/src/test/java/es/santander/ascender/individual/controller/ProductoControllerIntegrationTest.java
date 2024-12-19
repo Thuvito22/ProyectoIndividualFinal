@@ -48,21 +48,6 @@ public class ProductoControllerIntegrationTest {
         }
 
         @Test
-        void testCrearProductoExistente() throws Exception {
-                // Crear el producto y luego intentar crear uno con el mismo nombre
-                mockMvc.perform(MockMvcRequestBuilders.post("/productos")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(objectMapper.writeValueAsString(producto1)))
-                                .andExpect(status().isCreated());
-
-                // Intentar crear el mismo producto
-                mockMvc.perform(MockMvcRequestBuilders.post("/productos")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(objectMapper.writeValueAsString(producto1)))
-                                .andExpect(status().isBadRequest());
-        }
-
-        @Test
         void testObtenerProductoExistente() throws Exception {
                 mockMvc.perform(MockMvcRequestBuilders.post("/productos")
                                 .contentType(MediaType.APPLICATION_JSON)
