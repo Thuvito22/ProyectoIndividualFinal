@@ -14,6 +14,8 @@ function fetchProductos() {
   });
 }
 
+
+
 // Función para mostrar los productos en la lista
 function displayProductos(productos) {
   const list = $('#productos-list');
@@ -22,6 +24,14 @@ function displayProductos(productos) {
       const item = $('<li>').text(`${producto.nombre} - ${producto.descripcion} - ${producto.precio}€`);
       list.append(item);
   });
+
+
+
+
+  
 }
+
+
+
 
 

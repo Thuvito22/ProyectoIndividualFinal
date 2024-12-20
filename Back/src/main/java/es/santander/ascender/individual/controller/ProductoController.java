@@ -28,7 +28,8 @@ public class ProductoController {
     public ProductoController() {
         productos.put(1l, new Producto(1, "Producto A", "Descripción A", 100.0f, 10));
         productos.put(2l, new Producto(2, "Producto B", "Descripción B", 150.0f, 0));
-        productos.put(3l, new Producto(3, "Producto C", "Descripción B", 150.0f, 0));
+        productos.put(3l, new Producto(3, "Producto C", "Descripción C", 150.0f, 0));
+        productos.put(4l, new Producto(4, "Producto D", "Descripción D", 150.0f, 0));
     }
 
 
